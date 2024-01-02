@@ -1,2 +1,45 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="iostestplugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>iostestplugin</name><js-module name="iostestplugin" src="www/iostestplugin.js"><clobbers target="cordova.plugins.iostestplugin" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="iostestplugin"><param name="android-package" value="iostestplugin.iostestplugin" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml" /><source-file src="src/android/iostestplugin.java" target-dir="src/iostestplugin/iostestplugin" /></platform><platform name="ios"><config-file parent="/*" target="config.xml"><feature name="iostestplugin"><param name="ios-package" value="iostestplugin" /></feature></config-file><source-file src="src/ios/iostestplugin.m" /></platform></plugin>
+<plugin 
+    id="iostestplugin" 
+    version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Plugin Name -->
+    <name>iostestplugin</name>
+
+    <!-- JavaScript Module -->
+    <js-module name="iostestplugin" src="www/iostestplugin.js">
+        <clobbers target="cordova.plugins.iostestplugin" />
+    </js-module>
+
+    <!-- Android Platform Configuration -->
+    <platform name="android">
+        <!-- Add configuration to res/xml/config.xml -->
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="iostestplugin">
+                <param name="android-package" value="iostestplugin.iostestplugin" />
+            </feature>
+        </config-file>
+        
+        <!-- Update AndroidManifest.xml if necessary -->
+        <config-file parent="/*" target="AndroidManifest.xml" />
+
+        <!-- Source file for Android -->
+        <source-file src="src/android/iostestplugin.java" target-dir="src/iostestplugin/iostestplugin" />
+    </platform>
+
+    <!-- iOS Platform Configuration -->
+    <platform name="ios">
+        <!-- Update config.xml for iOS -->
+        <config-file parent="/*" target="config.xml">
+            <feature name="iostestplugin">
+                <param name="ios-package" value="iostestplugin" />
+            </feature>
+        </config-file>
+
+        <!-- Source file for iOS -->
+        <source-file src="src/ios/iostestplugin.m" />
+    </platform>
+
+</plugin>
